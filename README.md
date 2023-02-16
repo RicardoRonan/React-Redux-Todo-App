@@ -1,6 +1,15 @@
 
 ## Available Scripts
 
+### `npm install json-server`
+
+Installs the json-server to run the db.json file in order to watch server on port.
+For more information go to []
+
+### `npm run server`
+
+Runs the json-server 
+
 In the project directory, you can run:
 ### `npm install`
 
