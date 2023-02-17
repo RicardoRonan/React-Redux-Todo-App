@@ -18,7 +18,7 @@ function Todo(props) {
   }, [props]);
   return (
     <div id="todo-container">
-      <div>
+      <div id="control-section">
       <input
         type="text"
         value={newTodo}
@@ -38,11 +38,20 @@ function Todo(props) {
       >
         Add Todo
       </button>
+      <button
+        onClick={() => props.dispatch(update(newTodo, newStatus, eid))}
+        id="update-btn"
+      >
+        Update
+      </button>
+      <div id="radio-input-container">
+        <p id="radio-text">Change status of a todo:</p>
       <input
         type="radio"
         value="done"
         name="status"
-        checked={newStatus === "done"}
+        id="radio-input-1"
+        checked={newStatus === "DONE"}
         onChange={(e) => {
           setNewStatus(e.target.value);
         }}
@@ -52,7 +61,8 @@ function Todo(props) {
         type="radio"
         value="not done"
         name="status"
-        checked={newStatus === "not done"}
+        id="radio-input-2"
+        checked={newStatus === `NOT DONE`}
         onChange={(e) => {
           setNewStatus(e.target.value);
         }}
@@ -61,12 +71,9 @@ function Todo(props) {
       
       {" "}
       Not Done
-      <button
-        onClick={() => props.dispatch(update(newTodo, newStatus, eid))}
-        id="update-btn"
-      >
-        Update
-      </button>
+      </div>
+     
+      
       </div>
       {todos.map((todo, i) => {
         return (
@@ -76,7 +83,12 @@ function Todo(props) {
               className={todo.checked ? styles.strike : ""}
               id="todo-item"
             >
-              {todo.task} {todo.status}
+              <div>
+                <p id="todo-task">{todo.task} </p>
+               
+              <p id="todo-status">status:{todo.status}</p>
+
+              </div>
               <div>
                 <button
                   onClick={() => {

@@ -1,34 +1,9 @@
 {
   "todoList": [
     {
-      "task": "fsdghhtn",
+      "task": "buy pet food",
       "status": "done",
-      "id": 3
-    },
-    {
-      "task": "ascs",
-      "status": "not done",
-      "id": 4
-    },
-    {
-      "task": "csdc",
-      "status": "not done",
-      "id": 5
-    },
-    {
-      "task": "cascdsvs",
-      "status": "not done",
-      "id": 6
-    },
-    {
-      "task": "cdsc",
-      "status": "done",
-      "id": 7
-    },
-    {
-      "task": "s",
-      "status": "not done",
-      "id": 8
+      "id": 1
     }
   ]
 }

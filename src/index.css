@@ -3,36 +3,78 @@ body {
   padding: 0px;
   margin: 0px;
   color: rgba(0, 0, 0, 0.87);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Heebo', sans-serif;
 }
 h1#heading {
   display: flex;
   justify-content: center;
+  font-size: 5rem;
+  color: whitesmoke;
+}
+p#desc{
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  color: whitesmoke;
+
 }
 div#todo-container {
   height: auto;
   padding: 40px;
   margin: 4rem;
-  border-radius: 4px;
-
-  box-shadow: 1px 2px 2px #18122B(220deg 60% 50% / 0.2),
-    2px 4px 4px #18122B(220deg 60% 50% / 0.2),
-    4px 8px 8px #18122B(220deg 60% 50% / 0.2),
-    8px 16px 16px #18122B(220deg 60% 50% / 0.2),
-    16px 32px 32px #18122B(220deg 60% 50% / 0.2);
+  border-radius: 4px !important;
+  
+}
+#control-section{
+  background-color: #03001c9f;
+  margin: 20px;
+  padding:20px;
+  color:whitesmoke;
 }
 button#add-btn,
 #update-btn,
-#delete-btn,
 #edit-btn {
   width: 7rem;
   height: 3rem;
   margin: 1rem;
+  font-weight: 500;
+  font-size:1.2rem;
   color: whitesmoke;
   background-color: #443c68;
   border: none;
   border-radius: 4px;
   box-shadow: 2.3px 4.6px 4.6px hsl(0deg 0% 0% / 43%);
+}
+#delete-btn{
+  width: 7rem;
+  height: 3rem;
+  margin: 1rem;
+  color: #443c68;
+  font-weight: 500;
+  font-size:1.2rem;
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 2.3px 4.6px 4.6px hsl(0deg 0% 0% / 43%);
+
+}
+#delete-btn:hover{
+  color: whitesmoke;
+  background-color: #443c68;
+  transition: 0.3s ease-in-out;
+
+}
+button#add-btn:hover,
+#update-btn:hover,
+#edit-btn:hover {
+  color: #443c68;
+  background-color: whitesmoke;
+  transition: 0.3s ease-in-out;
+}
+#radio-input-container{
+  height:100px;
+  width: 30%;
+  padding: 20px;
 }
 li#todo-item {
   list-style-type: none;
@@ -47,12 +89,28 @@ input#addinput {
   margin: 1rem;
   border-radius: 4px;
 }
-input[type="radio"]::before {
-  content: "";
-  width: 0.65em;
-  height: 0.65em;
-  border-radius: 50%;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--form-control-color);
+input#addinput:focus{
+  border-color: #08002c;
+}
+input#radio-input-1[type=radio]:checked:after {
+  accent-color: green;
+}
+
+
+
+p#todo-status{
+  background-color: #20262E;
+  margin: 20px;
+  padding:20px;
+  font-size:1.2rem;
+  border-radius: 4px;
+}
+p#todo-task {
+  font-size: 1.5rem;
+  margin: 20px;
+  padding: 20px;
+}
+#radio-input-1 , #radio-input-2 {
+  font-size: 1rem;
+
 }
